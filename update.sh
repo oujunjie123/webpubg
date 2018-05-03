@@ -1,18 +1,20 @@
 #!/bin/bash
-echo "欢迎使用一键搭建"
-echo "即将搭建的是4.26-5.10版本"
-echo "准备开始安装"
-read -p "回车后开始安装"
-echo "请输入你的内网ip" 
-read -p "内网ip： " ip
+echo "Welcome PUBG Web Radar A key installation"
+echo "CE安全网"
+echo "WwW.CeSaFe.CoM"
+echo "Version 4.26-5.10"
+echo "Ready?"
+read -p "Enter Install"
+echo "Please Your Intranet IP" 
+read -p "Intranet IP： " ip
 cp /root/pubgradar/restart.sh /root/restart.sh
 chmod +x restart.sh
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 
-echo "ss搭建成，请记住连接信息"
-read -p "记住了吗？任意键继续" 
+echo "SS OK!，Remember relevant information"
+read -p "OK? Enter!" 
 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
 source ~/.bash_profile
@@ -28,13 +30,13 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/794959818/pubgradar.git
+git clone https://github.com/c1n5ec/webpubg.git
 cd pubgradar/
 npm i
 npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 
-echo "搭建完成"
-echo "并不是一个人在战斗，加入我们6698530@qq.com"
-echo "你能加上你的QQ，但加不上我的心"
+echo "PUBG Web Radar Build complete!"
+echo "CE安全网"
+echo "WwW.CeSaFe.CoM"
