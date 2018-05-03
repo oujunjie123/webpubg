@@ -30,7 +30,7 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/c1n5ec/webpubg.git
+git clone https://github.com/hacklele/webpubg.git
 cd pubgradar/
 npm i
 npm i -g pino
